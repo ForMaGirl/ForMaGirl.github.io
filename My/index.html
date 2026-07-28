@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta name="description" content="A love letter for Sharon.">
+  <title>My Special Person</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="loader" id="loader" aria-live="polite"><div class="heart-outline" aria-hidden="true">♡</div><p>Loading something special...</p></div>
+  <div class="cursor-glow" aria-hidden="true"></div><canvas id="sky" aria-hidden="true"></canvas><div class="aurora" aria-hidden="true"></div>
+  <header class="site-header"><a href="#top" class="wordmark">for <span>Sharon</span></a><button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false">Music <span>off</span></button></header>
+  <main id="top">
+    <section class="hero section" aria-labelledby="hero-title">
+      <p class="eyebrow reveal">A story, written in starlight</p>
+      <h1 id="hero-title" class="hero-title reveal">To My Princess,<br><em>Sharon</em> <span class="rose">♥</span></h1>
+      <p class="hero-copy reveal">“Every beautiful story begins with a single moment.<br>Mine began the day I met you.”</p>
+      <a class="button reveal" href="#story">Begin Our Story <span aria-hidden="true">↓</span></a>
+      <img class="hero-sticker reveal" src="images/sharon-perfect.png" alt="Sharon, you are perfect">
+      <p class="scroll-hint" aria-hidden="true">scroll to unfold</p>
+    </section>
+    <section class="story section" id="story" aria-labelledby="story-title">
+      <div class="section-intro reveal"><p class="eyebrow">Chapter one</p><h2 id="story-title">The moments that<br><em>changed everything.</em></h2></div>
+      <div class="timeline">
+        <article class="story-card reveal"><span class="card-number">01</span><h3>The Beginning</h3><p>It was the first day of school.</p><p>I didn’t know someone would quietly become the center of my thoughts.</p><p>Then I met you.</p></article>
+        <article class="story-card story-card--offset reveal"><span class="card-number">02</span><h3>The Moment I’ll Never Forget</h3><p>One day you sat behind me.</p><p>It may have looked like an ordinary moment to everyone else.</p><p>But for me… it became one of the happiest and most nervous moments of my life. A moment I’ll never forget.</p></article>
+      </div>
+    </section>
+    <section class="love section" aria-labelledby="love-title">
+      <div class="section-intro reveal"><p class="eyebrow">In all the little details</p><h2 id="love-title">What I love<br><em>about you.</em></h2></div>
+      <img class="love-sticker reveal" src="images/sharon-sticker.png" alt="A sweet illustration of Sharon">
+      <div class="love-grid">
+        <article class="love-card reveal"><span>👀</span><h3>Your Eyes</h3><p>“They’re the first thing that steals my attention every single time.”</p></article>
+        <article class="love-card reveal"><span>✦</span><h3>Your Hair</h3><p>“I’ve always loved your beautiful hair.”</p></article>
+        <article class="love-card reveal"><span>💖</span><h3>Your Personality</h3><p>“You’re beautiful because of the person you are.”</p></article>
+        <article class="love-card reveal"><span>🫶</span><h3>You</h3><p>“You’re simply my favorite person.”</p></article>
+      </div>
+    </section>
+    <section class="letter section" aria-labelledby="letter-title"><div class="letter-paper reveal"><p class="eyebrow">A note from my heart</p><h2 id="letter-title">My Princess,</h2><div id="typed-letter" class="letter-copy" aria-live="polite"></div><p class="signature">Forever Yours,<br><em>Nebin ♥</em></p></div></section>
+    <section class="time section" aria-labelledby="timer-title"><div class="section-intro reveal"><p class="eyebrow">Since 25 July 2026, 8:00 PM</p><h2 id="timer-title">Every second has<br><em>meant something.</em></h2></div><div class="timer reveal" aria-label="Time since 25 July 2026"><div><strong data-unit="years">00</strong><span>Years</span></div><div><strong data-unit="months">00</strong><span>Months</span></div><div><strong data-unit="days">00</strong><span>Days</span></div><div><strong data-unit="hours">00</strong><span>Hours</span></div><div><strong data-unit="minutes">00</strong><span>Minutes</span></div><div><strong data-unit="seconds">00</strong><span>Seconds</span></div></div></section>
+    <section class="ending section" aria-label="Forever"><div class="ending-copy"><p>No matter where life takes us…</p><p>I’ll choose you.</p><p>Again.</p><p>And Again.</p><h2>♥ <em>Forever</em> ♥</h2><span>With all my love,<br>Nebin</span></div></section>
+  </main>
+  <aside class="music-card" aria-label="Music player"><button class="record" id="playerButton" type="button" aria-label="Play our song">▶</button><div><span id="musicStatus">Now Playing</span><strong>Our song, waiting for you</strong></div><audio id="loveSong" preload="metadata"><source src="audio/our-song.mp3" type="audio/mpeg"></audio></aside>
+  <footer>Made with <span>♥</span> by Nebin</footer>
+  <script src="script.js"></script>
+</body>
+</html>
