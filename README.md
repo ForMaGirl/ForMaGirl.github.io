@@ -1,6 +1,6 @@
 # My Special Person
 
-A handcrafted, responsive romantic website for Sharon, built with only HTML, CSS, and vanilla JavaScript.
+A handcrafted, responsive romantic website for , built with only HTML, CSS, and vanilla JavaScript.
 
 ## Add your song
 
