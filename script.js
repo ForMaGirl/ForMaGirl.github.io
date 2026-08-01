@@ -48,9 +48,18 @@ function typeLetter() {
 
 const start = new Date(2026, 6, 25, 20, 0, 0);
 function updateTimer() {
-  const now = new Date(); let years = now.getFullYear() - start.getFullYear(); let months = now.getMonth() - start.getMonth();
-  if (months < 0) { years--; months += 12; }
-  const anchor = new Date(start); anchor.setFullYear(start.getFullYear() + years); anchor.setMonth(start.getMonth() + months);
+  const now = new Date();
+  let totalMonths = (now.getFullYear() - start.getFullYear()) * 12 + now.getMonth() - start.getMonth();
+  let anchor = new Date(start.getFullYear(), start.getMonth() + totalMonths, start.getDate(), start.getHours(), start.getMinutes(), start.getSeconds());
+
+  // A month only completes on the same day and time as the start date.
+  if (now < anchor) {
+    totalMonths--;
+    anchor = new Date(start.getFullYear(), start.getMonth() + totalMonths, start.getDate(), start.getHours(), start.getMinutes(), start.getSeconds());
+  }
+
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
   let diff = Math.max(0, now - anchor); const units = { days: Math.floor(diff / 86400000) };
   diff %= 86400000; units.hours = Math.floor(diff / 3600000); diff %= 3600000; units.minutes = Math.floor(diff / 60000); units.seconds = Math.floor((diff % 60000) / 1000);
   Object.entries({ years, months, ...units }).forEach(([unit, value]) => { const el = $(`[data-unit="${unit}"]`); const text = String(value).padStart(2, '0'); if (el.textContent !== text) { el.textContent = text; el.classList.remove('flip'); void el.offsetWidth; el.classList.add('flip'); } });
